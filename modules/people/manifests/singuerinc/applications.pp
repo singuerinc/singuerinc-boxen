@@ -59,6 +59,7 @@ class people::singuerinc::applications {
   package { 'ack':}
   package { 'tree':}
   package { 'subliminal':}
+	package { 'httpie':}
   include spf13vim3
   include autojump
 }
