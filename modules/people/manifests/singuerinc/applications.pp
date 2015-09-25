@@ -20,13 +20,18 @@ class people::singuerinc::applications {
   # package { 'pycharm': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
   # package { 'rubymine': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
 
+  homebrew::tap { 'caskroom/versions': }
   homebrew::tap { 'caskroom/fonts': }
-  homebrew::tap { 'neovim/homebrew-neovim': }
+  homebrew::tap { 'neovim/neovim': }
 
   package {
     [
+      'font-fira-mono',
       'font-hack',
       'font-inconsolata-for-powerline',
+      'font-lato',
+      'font-monoid',
+      'font-open-sans',
       'font-ubuntu-mono-powerline'
     ]:
     provider => 'brewcask',
@@ -51,25 +56,38 @@ class people::singuerinc::applications {
 
   package {
     [
+      'neovim'
+    ]:
+    install_options => ['--HEAD'],
+    provider => 'homebrew',
+    require  => Homebrew::Tap['neovim/neovim']
+  }
+
+  package {
+    [
       'adobe-air',
       'adobe-creative-cloud',
       'android-file-transfer',
       'appzapper',
-      'archiver',
       'atom',
       'google-chrome',
+      'google-chrome-canary',
       'caffeine',
       'daisydisk',
+      'enjoyable',
       'flux',
       'firefox',
       'forklift',
       'hipchat',
+      'imageoptim',
       'iterm2',
+      'keka',
       'little-snitch',
       'macdown',
       'mamp',
       'nvalt',
       'phpstorm',
+      'openemu',
       'opera',
       'sequel-pro',
       'shiori',
@@ -80,6 +98,7 @@ class people::singuerinc::applications {
 #      'sourcetree',
       'sublime-text',
       'teamviewer',
+      'tig',
       'transmission',
       'vagrant',
       'virtualbox',
