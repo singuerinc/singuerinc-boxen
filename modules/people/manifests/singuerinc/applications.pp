@@ -14,50 +14,79 @@ class people::singuerinc::applications {
 #  }
 #  include php::composer
 
-  package { 'adobe-air': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'adobe-creative-cloud': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'android-file-transfer': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'appzapper': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'archiver': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'atom': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'autojump':}
-  package { 'google-chrome': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'caffeine': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'daisydisk': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'flux': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'firefox': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'forklift': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'hipchat': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'htop':}
-  package { 'httpie':}
-  # package { 'intellij-idea': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'iterm2': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'little-snitch': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'macdown': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'mamp': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'nvalt': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'phpstorm': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  # package { 'pycharm': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'opera': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  # package { 'rubymine': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'sequel-pro': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'shiori': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'skype': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'slack': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'slate': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'spotify': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'sourcetree': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'sublime-text': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'subliminal':}
-  package { 'teamviewer': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
   package { 'tmux': install_options => '--fresh' }
-  package { 'transmission': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'tree':}
-  # package { 'vmware-fusion': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'vagrant': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'virtualbox': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'vlc': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'webstorm': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'wget':}
 
+  # package { 'intellij-idea': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
+  # package { 'pycharm': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
+  # package { 'rubymine': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
+
+  homebrew::tap { 'caskroom/fonts': }
+  homebrew::tap { 'neovim/homebrew-neovim': }
+
+  package {
+    [
+      'font-hack',
+      'font-inconsolata-for-powerline',
+      'font-ubuntu-mono-powerline'
+    ]:
+    provider => 'brewcask',
+    require  => Homebrew::Tap['caskroom/fonts']
+  }
+
+  package {
+    [
+      'aria2',
+      'ccat',
+      'autojump',
+      'htop',
+      'httpie',
+      'peco',
+      'subliminal',
+      'the_silver_searcher',
+      'tree',
+      'wget',
+      'z'
+    ]:
+  }
+
+  package {
+    [
+      'adobe-air',
+      'adobe-creative-cloud',
+      'android-file-transfer',
+      'appzapper',
+      'archiver',
+      'atom',
+      'google-chrome',
+      'caffeine',
+      'daisydisk',
+      'flux',
+      'firefox',
+      'forklift',
+      'hipchat',
+      'iterm2',
+      'little-snitch',
+      'macdown',
+      'mamp',
+      'nvalt',
+      'phpstorm',
+      'opera',
+      'sequel-pro',
+      'shiori',
+      'skype',
+      'slack',
+      'slate',
+      'spotify',
+#      'sourcetree',
+      'sublime-text',
+      'teamviewer',
+      'transmission',
+      'vagrant',
+      'virtualbox',
+      'vlc',
+      'webstorm'
+    ]:
+      provider => 'brewcask',
+      install_options => ['--appdir=/Applications']
+  }
 }
