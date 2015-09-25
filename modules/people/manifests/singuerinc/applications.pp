@@ -17,6 +17,7 @@ class people::singuerinc::applications {
   package { 'adobe-air': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
   package { 'adobe-creative-cloud': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
   package { 'android-file-transfer': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
+  package { 'appzapper': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
   package { 'archiver': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
   package { 'atom': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
   package { 'autojump':}
@@ -46,7 +47,7 @@ class people::singuerinc::applications {
   package { 'slate': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
   package { 'spotify': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
   package { 'sourcetree': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  package { 'sublime-text3': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
+  package { 'sublime-text': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
   package { 'subliminal':}
   package { 'teamviewer': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
   package { 'tmux': install_options => '--fresh' }
