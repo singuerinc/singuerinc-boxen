@@ -48,6 +48,7 @@ class people::singuerinc::applications {
       'peco',
       'subliminal',
       'the_silver_searcher',
+			'tig',
       'tree',
       'wget',
       'z'
@@ -98,7 +99,6 @@ class people::singuerinc::applications {
 #      'sourcetree',
       'sublime-text',
       'teamviewer',
-      'tig',
       'transmission',
       'vagrant',
       'virtualbox',
