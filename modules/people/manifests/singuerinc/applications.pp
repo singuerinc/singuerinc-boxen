@@ -9,20 +9,8 @@ class people::singuerinc::applications {
   include mysql
   include spf13vim3
 
-#  php::version { '5.6.9':
-#    ensure => present
-#  }
-#  include php::composer
-
-  package { 'tmux': install_options => '--fresh' }
-
-  # package { 'intellij-idea': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  # package { 'pycharm': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-  # package { 'rubymine': provider => 'brewcask', install_options => ['--appdir=/Applications'] }
-
   homebrew::tap { 'caskroom/versions': }
   homebrew::tap { 'caskroom/fonts': }
-  homebrew::tap { 'neovim/neovim': }
 
   package {
     [
@@ -55,39 +43,25 @@ class people::singuerinc::applications {
     ]:
   }
 
-  package {
-    [
-      'neovim'
-    ]:
-    install_options => ['--HEAD'],
-    provider => 'homebrew',
-    require  => Homebrew::Tap['neovim/neovim']
-  }
+  package { 'tmux': install_options => '--fresh' }
 
   package {
     [
-      'adobe-air',
-      'adobe-creative-cloud',
       'android-file-transfer',
-      'appzapper',
       'atom',
       'google-chrome',
       'google-chrome-canary',
-      'caffeine',
-      'daisydisk',
       'enjoyable',
       'flux',
       'firefox',
       'forklift',
       'hipchat',
       'imageoptim',
+			'insomnia-x',
       'iterm2',
       'keka',
-      'little-snitch',
       'macdown',
-      'mamp',
       'nvalt',
-      'phpstorm',
       'openemu',
       'opera',
       'sequel-pro',
@@ -96,7 +70,7 @@ class people::singuerinc::applications {
       'slack',
       'slate',
       'spotify',
-#      'sourcetree',
+      'sourcetree',
       'sublime-text',
       'teamviewer',
       'transmission',
