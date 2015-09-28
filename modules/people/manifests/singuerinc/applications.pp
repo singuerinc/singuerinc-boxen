@@ -40,6 +40,16 @@ class people::singuerinc::applications {
 
 	package {
 		[
+			'sublime-text3',
+      'google-chrome-canary'
+		]:
+		provider => 'brewcask',
+		install_options => ['--appdir=/Applications'],
+		require => Homebrew::Tap['caskroom/versions']
+	}
+
+	package {
+		[
 			'popcorn-time',
 		]:
 		provider => 'brewcask',
@@ -69,16 +79,18 @@ class people::singuerinc::applications {
     [
       'android-file-transfer',
       'atom',
-      'google-chrome',
-      'google-chrome-canary',
+      'boom',
       'enjoyable',
       'flux',
       'firefox',
       'forklift',
+      'google-chrome',
       'hipchat',
       'imageoptim',
 			'insomniax',
       'iterm2',
+      'handbrake',
+      'hex-fiend',
       'keka',
       'macdown',
       'nvalt',
@@ -91,7 +103,6 @@ class people::singuerinc::applications {
       'slate',
       'spotify',
       'sourcetree',
-      'sublime-text',
       'teamviewer',
       'transmission',
       'vagrant',
