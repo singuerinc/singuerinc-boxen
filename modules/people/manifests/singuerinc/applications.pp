@@ -11,7 +11,7 @@ class people::singuerinc::applications {
 
   homebrew::tap { 'caskroom/versions': }
   homebrew::tap { 'caskroom/fonts': }
-  homebrew::tap { 'casidiablo/custom': }
+# homebrew::tap { 'casidiablo/custom': }
   homebrew::tap { 'singuerinc/homebrew-casks': }
 
   package {
@@ -48,13 +48,13 @@ class people::singuerinc::applications {
 		require => Homebrew::Tap['caskroom/versions']
 	}
 
-	package {
-		[
-			'popcorn-time',
-		]:
-		provider => 'brewcask',
-		require => Homebrew::Tap['casidiablo/custom']
-	}
+#	package {
+#		[
+#			'popcorn-time',
+#		]:
+#		provider => 'brewcask',
+#		require => Homebrew::Tap['casidiablo/custom']
+#	}
 
   package {
     [
