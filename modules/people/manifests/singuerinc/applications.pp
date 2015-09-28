@@ -57,7 +57,7 @@ class people::singuerinc::applications {
       'forklift',
       'hipchat',
       'imageoptim',
-			'insomnia-x',
+			'insomniax',
       'iterm2',
       'keka',
       'macdown',
