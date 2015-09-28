@@ -11,6 +11,8 @@ class people::singuerinc::applications {
 
   homebrew::tap { 'caskroom/versions': }
   homebrew::tap { 'caskroom/fonts': }
+  homebrew::tap { 'casidiablo/custom': }
+  homebrew::tap { 'singuerinc/homebrew-casks': }
 
   package {
     [
@@ -25,6 +27,24 @@ class people::singuerinc::applications {
     provider => 'brewcask',
     require  => Homebrew::Tap['caskroom/fonts']
   }
+
+	package {
+		[
+			'affinity-designer',
+			'affinity-photo'
+		]:
+		provider => 'brewcask',
+		install_options => ['--appdir=/Applications'],
+		require => Homebrew::Tap['singuerinc/homebrew-casks']
+	}
+
+	package {
+		[
+			'popcorn-time',
+		]:
+		provider => 'brewcask',
+		require => Homebrew::Tap['casidiablo/custom']
+	}
 
   package {
     [
