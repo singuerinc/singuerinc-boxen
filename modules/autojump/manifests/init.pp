@@ -1,3 +1,0 @@
-class autojump {
-  package { 'autojump': }
-}
