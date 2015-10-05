@@ -74,6 +74,7 @@ class people::singuerinc::applications {
   }
 
   package { 'tmux': install_options => '--fresh' }
+  package { 'vim': install_options => '--with-lua' }
 
   package {
     [
@@ -91,6 +92,7 @@ class people::singuerinc::applications {
       'iterm2',
       'handbrake',
       'hex-fiend',
+      'java6',
       'keka',
       'macdown',
       'nvalt',
