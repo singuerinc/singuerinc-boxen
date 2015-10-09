@@ -129,11 +129,6 @@ GITHUBTARBALL
     tmux (1.0.2)
 
 GITHUBTARBALL
-  remote: boxen/puppet-vim
-  specs:
-    vim (1.0.5)
-
-GITHUBTARBALL
   remote: boxen/puppet-wget
   specs:
     wget (1.0.1)
@@ -199,7 +194,6 @@ DEPENDENCIES
   stdlib (= 4.7.0)
   sudo (= 1.0.0)
   tmux (= 1.0.2)
-  vim (= 1.0.5)
   wget (= 1.0.1)
   xquartz (= 1.2.1)
   zsh (= 1.0.0)
