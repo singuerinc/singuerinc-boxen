@@ -16,12 +16,16 @@ class people::singuerinc::applications {
 
   package {
     [
+      'font-camingocode',
+      'font-fantasque-sans-mono',
+      'font-input',
       'font-fira-mono',
       'font-hack',
       'font-inconsolata-for-powerline',
       'font-lato',
       'font-monoid',
       'font-open-sans',
+      'font-share-tech',
       'font-ubuntu-mono-powerline'
     ]:
     provider => 'brewcask',
@@ -63,10 +67,11 @@ class people::singuerinc::applications {
       'autojump',
       'htop',
       'httpie',
+      'owasp-zap',
       'peco',
       'subliminal',
       'the_silver_searcher',
-			'tig',
+	  'tig',
       'tree',
       'wget',
       'z'
@@ -88,7 +93,7 @@ class people::singuerinc::applications {
       'google-chrome',
       'hipchat',
       'imageoptim',
-			'insomniax',
+	  'insomniax',
       'iterm2',
       'handbrake',
       'hex-fiend',

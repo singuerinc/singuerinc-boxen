@@ -48,26 +48,6 @@ class people::singuerinc::repositories (
     require => Repository["${my_sourcedir}/oh-my-zsh"]
   }
 
-
-  # VIM
-  # theme - chriskempson/tomorrow-theme
-  repository { "${my_sourcedir}/tomorrow-theme":
-    source  => 'chriskempson/tomorrow-theme',
-    provider => 'git'
-  }
-
-  # create colors folder
-  file { "/Users/${my_username}/.vim/colors":
-      ensure => "directory"
-  }
-
-  file { "/Users/${my_username}/.vim/colors/Tomorrow-Night.vim":
-    ensure  => link,
-    target  => "${my_sourcedir}/tomorrow-theme/vim/colors/Tomorrow-Night.vim",
-    require => Repository["${my_sourcedir}/tomorrow-theme"]
-  }
-
-
   # DOTFILES
   repository { "${my_sourcedir}/dotfiles":
     ensure => present,
@@ -140,20 +120,6 @@ class people::singuerinc::repositories (
     require => Repository["${my_sourcedir}/dotfiles"]
   }
 
-  file { "/Users/${my_username}/.vim":
-    ensure  => link,
-    mode    => '0644',
-    target  => "${my_sourcedir}/dotfiles/.vim",
-    require => Repository["${my_sourcedir}/dotfiles"]
-  }
-
-  file { "/Users/${my_username}/.vimrc":
-    ensure  => link,
-    mode    => '0644',
-    target  => "${my_sourcedir}/dotfiles/.vimrc",
-    require => Repository["${my_sourcedir}/dotfiles"]
-  }
-
   file { "/Users/${my_username}/.tmux.conf":
     ensure  => link,
     mode    => '0644',
@@ -174,13 +140,6 @@ class people::singuerinc::repositories (
     target  => "${my_sourcedir}/dotfiles/.functions",
     require => Repository["${my_sourcedir}/dotfiles"]
   }
-
-#  file { "/Users/${my_username}/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings":
-#    ensure  => link,
-#    mode    => '0644',
-#    target  => "${my_sourcedir}/dotfiles/preferences/Preferences.sublime-settings",
-#    require => Repository["${my_sourcedir}/dotfiles"]
-#  }
 
   # osx_defaults
   # exec { "osx_defaults":
