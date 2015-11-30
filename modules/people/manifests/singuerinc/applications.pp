@@ -70,7 +70,6 @@ class people::singuerinc::applications {
       'httpie',
       'lynx',
       'nmap',
-      'owasp-zap',
       'peco',
       'ssh-copy-id',
       'subliminal',
