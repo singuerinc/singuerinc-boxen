@@ -6,13 +6,13 @@ class people::singuerinc::applications {
   include pcre
   include pkgconfig
 # include mongodb
-  include mysql
+# include mysql
   include spf13vim3
 
   homebrew::tap { 'caskroom/versions': }
   homebrew::tap { 'caskroom/fonts': }
 # homebrew::tap { 'casidiablo/custom': }
-  homebrew::tap { 'singuerinc/homebrew-casks': }
+# homebrew::tap { 'singuerinc/homebrew-casks': }
 
   package {
     [
@@ -20,6 +20,7 @@ class people::singuerinc::applications {
       'font-fantasque-sans-mono',
       'font-input',
       'font-fira-mono',
+      'font-gidole',
       'font-hack',
       'font-inconsolata-for-powerline',
       'font-lato',
@@ -32,15 +33,15 @@ class people::singuerinc::applications {
     require  => Homebrew::Tap['caskroom/fonts']
   }
 
-	package {
-		[
-			'affinity-designer',
-			'affinity-photo'
-		]:
-		provider => 'brewcask',
-		install_options => ['--appdir=/Applications'],
-		require => Homebrew::Tap['singuerinc/homebrew-casks']
-	}
+	# package {
+	# 	[
+	# 		'affinity-designer',
+	# 		'affinity-photo'
+	# 	]:
+	# 	provider => 'brewcask',
+	# 	install_options => ['--appdir=/Applications'],
+	# 	require => Homebrew::Tap['singuerinc/homebrew-casks']
+	# }
 
 	package {
 		[
@@ -74,7 +75,7 @@ class people::singuerinc::applications {
       'ssh-copy-id',
       'subliminal',
       'the_silver_searcher',
-	  'tig',
+	    'tig',
       'tree',
       'wget',
       'z'
@@ -82,28 +83,29 @@ class people::singuerinc::applications {
   }
 
   package { 'tmux': install_options => '--fresh' }
-  package { 'vim': install_options => '--with-lua' }
+  # package { 'vim': install_options => '--with-lua' }
 
   package {
     [
       'android-file-transfer',
       'atom',
       'boom',
+      'chromium',
       'enjoyable',
       'flux',
       'firefox',
       'forklift',
       'google-chrome',
-      'hipchat',
+#      'hipchat',
       'imageoptim',
-	  'insomniax',
+  	  'insomniax',
       'iterm2',
       'handbrake',
       'hex-fiend',
       'java6',
       'keka',
       'macdown',
-      'nvalt',
+#      'nvalt',
       'openemu',
       'opera',
       'sequel-pro',
@@ -115,10 +117,11 @@ class people::singuerinc::applications {
       'sourcetree',
       'teamviewer',
       'transmission',
-      'vagrant',
+#      'vagrant',
       'virtualbox',
       'vlc',
-      'webstorm'
+      'webstorm',
+      'whatsdesktop'
     ]:
       provider => 'brewcask',
       install_options => ['--appdir=/Applications']
