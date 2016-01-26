@@ -115,6 +115,7 @@ class people::singuerinc::applications {
       'spotify',
       'sourcetree',
       'teamviewer',
+      'tomighty',
       'transmission',
 #      'vagrant',
       'virtualbox',
