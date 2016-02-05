@@ -89,6 +89,7 @@ class people::singuerinc::applications {
       'android-file-transfer',
       'atom',
       'boom',
+      'cheatsheet',
       'chromium',
       'enjoyable',
       'flux',
