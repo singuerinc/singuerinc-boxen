@@ -64,7 +64,7 @@ class people::singuerinc::applications {
       'aria2',
       'ccat',
       'autojump',
-      'htop',
+#      'htop',
       'httpie',
       'lynx',
       'nmap',
