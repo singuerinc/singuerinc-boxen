@@ -86,7 +86,9 @@ class people::singuerinc::applications {
     [
       'adobe-air',
       'adobe-creative-cloud',
+      'alfred',
       'android-file-transfer',
+      'applepi-baker',
       'appzapper',
       'atom',
       'boom',
@@ -99,6 +101,7 @@ class people::singuerinc::applications {
       'firefox',
       'flux',
       'forklift',
+      'garmin-express',
       'google-chrome',
       'handbrake',
       'hex-fiend',
