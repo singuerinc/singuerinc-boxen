@@ -11,18 +11,15 @@ class people::singuerinc::applications {
 
   homebrew::tap { 'caskroom/versions': }
   homebrew::tap { 'caskroom/fonts': }
-# homebrew::tap { 'casidiablo/custom': }
-# homebrew::tap { 'singuerinc/homebrew-casks': }
 
   package {
     [
       'font-camingocode',
       'font-fantasque-sans-mono',
-      'font-input',
       'font-fira-mono',
-      # 'font-gidole',
       'font-hack',
       'font-inconsolata-for-powerline',
+      'font-input',
       'font-lato',
       'font-monoid',
       'font-open-sans',
@@ -46,7 +43,8 @@ class people::singuerinc::applications {
 	package {
 		[
 			'sublime-text3',
-      'google-chrome-canary'
+      'google-chrome-canary',
+      'openemu-experimental'
 		]:
 		provider => 'brewcask',
 		install_options => ['--appdir=/Applications'],
@@ -86,44 +84,45 @@ class people::singuerinc::applications {
 
   package {
     [
+      'adobe-air',
+      'adobe-creative-cloud',
       'android-file-transfer',
+      'appzapper',
       'atom',
       'boom',
       'cheatsheet',
       'chromium',
+      'daisydisk',
       'dockertoolbox',
+      'dropbox',
       'enjoyable',
-      'flux',
       'firefox',
+      'flux',
       'forklift',
       'google-chrome',
-#      'hipchat',
+      'handbrake',
+      'hex-fiend',
       'imageoptim',
   	  'insomniax',
       'iterm2',
-      'handbrake',
-      'hex-fiend',
+      'iterm2-beta',
       'java6',
       'keka',
       'macdown',
-#      'nvalt',
-      'openemu',
       'opera',
       'sequel-pro',
-      'shiori',
       'skype',
       'slack',
       'slate',
-      'spotify',
       'sourcetree',
+      'spotify',
       'teamviewer',
-      'tomighty',
+      'torbrowser',
       'transmission',
 #      'vagrant',
       'virtualbox',
       'vlc',
-      'webstorm',
-      'whatsdesktop'
+      'webstorm'
     ]:
       provider => 'brewcask',
       install_options => ['--appdir=/Applications']
