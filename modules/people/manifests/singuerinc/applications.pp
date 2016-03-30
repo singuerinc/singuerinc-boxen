@@ -8,6 +8,13 @@ class people::singuerinc::applications {
 # include mongodb
 # include mysql
   include spf13vim3
+  include atom
+
+  atom::package { 'atom-ternjs': }
+  atom::package { 'language-docker': }
+  atom::package { 'language-puppet': }
+  atom::theme   { 'nucleus-dark-ui': }
+  atom::theme   { 'gruvbox': }
 
   homebrew::tap { 'caskroom/versions': }
   homebrew::tap { 'caskroom/fonts': }
@@ -90,7 +97,7 @@ class people::singuerinc::applications {
       'android-file-transfer',
       'applepi-baker',
       'appzapper',
-      'atom',
+#      'atom',
       'boom',
       'cheatsheet',
       'chromium',
