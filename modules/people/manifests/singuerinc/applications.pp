@@ -80,7 +80,7 @@ class people::singuerinc::applications {
   }
 
   package { 'tmux': install_options => '--fresh' }
-  # package { 'vim': install_options => '--with-lua' }
+  package { 'vim': install_options => '--with-lua' }
 
   package {
     [
