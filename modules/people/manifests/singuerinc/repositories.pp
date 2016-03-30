@@ -55,6 +55,18 @@ class people::singuerinc::repositories (
     provider => 'git'
   }
 
+  repository { "${my_sourcedir}/themes/dracula-theme":
+    ensure => present,
+    source => 'zenorocha/dracula-theme',
+    provider => 'git'
+  }
+
+  repository { "${my_sourcedir}/oh-my-zsh/custom/plugins/zsh-autosuggestions":
+    ensure => present,
+    source => 'zsh-users/zsh-autosuggestions',
+    provider => 'git',
+    require => Repository["${my_sourcedir}/oh-my-zsh"]
+  }
 
   # links
   file { "/Users/${my_username}/.zshrc":
