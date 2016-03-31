@@ -61,6 +61,12 @@ class people::singuerinc::repositories (
     provider => 'git'
   }
 
+  repository { "${my_sourcedir}/themes/gruvbox-contrib":
+    ensure => present,
+    source => 'morhetz/gruvbox-contrib',
+    provider => 'git'
+  }
+
   repository { "${my_sourcedir}/oh-my-zsh/custom/plugins/zsh-autosuggestions":
     ensure => present,
     source => 'zsh-users/zsh-autosuggestions',

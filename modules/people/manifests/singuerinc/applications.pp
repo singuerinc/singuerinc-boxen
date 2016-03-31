@@ -8,6 +8,13 @@ class people::singuerinc::applications {
 # include mongodb
 # include mysql
   include spf13vim3
+  include atom
+
+  atom::package { 'atom-ternjs': }
+  atom::package { 'language-docker': }
+  atom::package { 'language-puppet': }
+  atom::theme   { 'nucleus-dark-ui': }
+  atom::theme   { 'gruvbox': }
 
   homebrew::tap { 'caskroom/versions': }
   homebrew::tap { 'caskroom/fonts': }
@@ -64,7 +71,7 @@ class people::singuerinc::applications {
       'aria2',
       'ccat',
       'autojump',
-#      'htop',
+      'htop',
       'httpie',
       'lynx',
       'nmap',
@@ -90,7 +97,6 @@ class people::singuerinc::applications {
       'android-file-transfer',
       'applepi-baker',
       'appzapper',
-      'atom',
       'boom',
       'cheatsheet',
       'chromium',
@@ -107,7 +113,6 @@ class people::singuerinc::applications {
       'hex-fiend',
       'imageoptim',
   	  'insomniax',
-      'iterm2',
       'iterm2-beta',
       'java6',
       'keka',
@@ -122,7 +127,6 @@ class people::singuerinc::applications {
       'teamviewer',
       'torbrowser',
       'transmission',
-#      'vagrant',
       'virtualbox',
       'vlc',
       'webstorm'
