@@ -13,6 +13,15 @@ class people::singuerinc::applications {
   atom::package { 'atom-ternjs': }
   atom::package { 'language-docker': }
   atom::package { 'language-puppet': }
+  atom::package { 'language-smarty': }
+  atom::package { 'emmet': }
+  atom::package { 'set-syntax': }
+  atom::package { 'jumpy': }
+  atom::package { 'language-sql-mysql': }
+  atom::package { 'minimap': }
+  atom::package { 'file-icons': }
+  atom::package { 'atom-beautify': }
+  atom::package { 'linter': }
   atom::theme   { 'nucleus-dark-ui': }
   atom::theme   { 'gruvbox': }
 
