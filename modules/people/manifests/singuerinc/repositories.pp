@@ -67,6 +67,18 @@ class people::singuerinc::repositories (
     provider => 'git'
   }
 
+  repository { "${my_sourcedir}/themes/Smyck-Color-Scheme":
+    ensure => present,
+    source => 'hukl/Smyck-Color-Scheme',
+    provider => 'git'
+  }
+
+  repository { "${my_sourcedir}/themes/iTerm2-Color-Schemes":
+    ensure => present,
+    source => 'mbadolato/iTerm2-Color-Schemes',
+    provider => 'git'
+  }
+
   repository { "${my_sourcedir}/oh-my-zsh/custom/plugins/zsh-autosuggestions":
     ensure => present,
     source => 'zsh-users/zsh-autosuggestions',
