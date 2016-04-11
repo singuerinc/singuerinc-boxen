@@ -5,15 +5,11 @@ class people::singuerinc::applications {
   include libtool
   include pcre
   include pkgconfig
-# include mongodb
-# include mysql
   include spf13vim3
   include atom
 
   atom::package { 'atom-ternjs': }
-  atom::package { 'language-docker': }
-  atom::package { 'language-puppet': }
-  atom::package { 'language-smarty': }
+
   atom::package { 'emmet': }
   atom::package { 'set-syntax': }
   atom::package { 'jumpy': }
@@ -21,7 +17,18 @@ class people::singuerinc::applications {
   atom::package { 'minimap': }
   atom::package { 'file-icons': }
   atom::package { 'atom-beautify': }
+
+  atom::package { 'language-docker': }
+  atom::package { 'language-puppet': }
+  atom::package { 'language-smarty': }
+
   atom::package { 'linter': }
+  atom::package { 'linter-jscs': }
+  atom::package { 'linter-jsonlint': }
+  atom::package { 'linter-csslint': }
+  atom::package { 'linter-htmlhint': }
+  atom::package { 'linter-js-yaml': }
+
   atom::theme   { 'nucleus-dark-ui': }
   atom::theme   { 'gruvbox': }
 
