@@ -84,6 +84,7 @@ class people::singuerinc::applications {
 
   package {
     [
+      'asciinema',
       'aria2',
       'ccat',
       'autojump',
