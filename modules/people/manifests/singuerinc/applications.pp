@@ -146,6 +146,7 @@ class people::singuerinc::applications {
       'transmission',
       'virtualbox',
       'vlc',
+      'whatsapp',
       'webstorm'
     ]:
       provider => 'brewcask',
