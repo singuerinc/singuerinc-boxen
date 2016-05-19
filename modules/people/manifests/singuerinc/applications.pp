@@ -118,7 +118,7 @@ class people::singuerinc::applications {
       'cheatsheet',
       'chromium',
       'daisydisk',
-      'dockertoolbox',
+#      'dockertoolbox',
       'dropbox',
       'enjoyable',
       'firefox',
