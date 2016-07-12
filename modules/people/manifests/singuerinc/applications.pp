@@ -8,26 +8,29 @@ class people::singuerinc::applications {
   include spf13vim3
   include atom
 
-  atom::package { 'atom-ternjs': }
 
-  atom::package { 'emmet': }
-  atom::package { 'set-syntax': }
-  atom::package { 'jumpy': }
-  atom::package { 'language-sql-mysql': }
-  atom::package { 'minimap': }
-  atom::package { 'file-icons': }
   atom::package { 'atom-beautify': }
-
+  atom::package { 'atom-ternjs': }
+  atom::package { 'double-tag': }
+  atom::package { 'emmet': }
+  atom::package { 'file-icons': }
+  atom::package { 'jumpy': }
   atom::package { 'language-docker': }
   atom::package { 'language-puppet': }
   atom::package { 'language-smarty': }
-
+  atom::package { 'language-sql-mysql': }
+  atom::package { 'last-cursor-position': }
   atom::package { 'linter': }
   atom::package { 'linter-jscs': }
   atom::package { 'linter-jsonlint': }
   atom::package { 'linter-csslint': }
   atom::package { 'linter-htmlhint': }
   atom::package { 'linter-js-yaml': }
+  atom::package { 'minimap': }
+  atom::package { 'minimap-cursorline': }
+  atom::package { 'pigments': }
+  atom::package { 'set-syntax': }
+
 
   atom::theme   { 'nucleus-dark-ui': }
   atom::theme   { 'gruvbox': }
