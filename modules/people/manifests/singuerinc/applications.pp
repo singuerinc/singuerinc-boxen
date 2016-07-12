@@ -6,8 +6,8 @@ class people::singuerinc::applications {
   include pcre
   include pkgconfig
   include spf13vim3
-  include atom
 
+  include atom
 
   atom::package { 'atom-beautify': }
   atom::package { 'atom-ternjs': }
@@ -30,7 +30,6 @@ class people::singuerinc::applications {
   atom::package { 'minimap-cursorline': }
   atom::package { 'pigments': }
   atom::package { 'set-syntax': }
-
 
   atom::theme   { 'nucleus-dark-ui': }
   atom::theme   { 'gruvbox': }
@@ -56,19 +55,18 @@ class people::singuerinc::applications {
     require  => Homebrew::Tap['caskroom/fonts']
   }
 
-	# package {
-	# 	[
-	# 		'affinity-designer',
-	# 		'affinity-photo'
-	# 	]:
-	# 	provider => 'brewcask',
-	# 	install_options => ['--appdir=/Applications'],
-	# 	require => Homebrew::Tap['singuerinc/homebrew-casks']
-	# }
+# package {
+# 	[
+# 		'affinity-designer',
+# 		'affinity-photo'
+# 	]:
+# 	provider => 'brewcask',
+# 	install_options => ['--appdir=/Applications'],
+# 	require => Homebrew::Tap['singuerinc/homebrew-casks']
+# }
 
-	package {
-		[
-			'sublime-text3',
+  package {
+    [
       'google-chrome-canary',
       'openemu-experimental'
 		]:
@@ -94,12 +92,14 @@ class people::singuerinc::applications {
       'htop',
       'httpie',
       'lynx',
+      'neovim/neovim/neovim',
       'nmap',
       'peco',
       'ssh-copy-id',
+      'sublime-text',
       'subliminal',
       'the_silver_searcher',
-	    'tig',
+      'tig',
       'tree',
       'wget',
       'z'
@@ -116,23 +116,23 @@ class people::singuerinc::applications {
       'alfred',
       'android-file-transfer',
       'applepi-baker',
-      'appzapper',
+#     'appzapper',
       'boom',
-      'cheatsheet',
+#     'cheatsheet',
       'chromium',
       'daisydisk',
-#      'dockertoolbox',
+#     'dockertoolbox',
       'dropbox',
-      'enjoyable',
+#     'enjoyable',
       'firefox',
       'flux',
       'forklift',
-      'garmin-express',
+#     'garmin-express',
       'google-chrome',
       'handbrake',
       'hex-fiend',
       'imageoptim',
-  	  'insomniax',
+      'insomniax',
       'iterm2-beta',
       'java6',
       'keka',
@@ -140,7 +140,7 @@ class people::singuerinc::applications {
       'opera',
       'sequel-pro',
       'skype',
-      'slack',
+#     'slack',
       'slate',
       'sourcetree',
       'spotify',
