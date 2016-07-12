@@ -34,61 +34,12 @@ class people::singuerinc::applications {
   atom::theme   { 'nucleus-dark-ui': }
   atom::theme   { 'gruvbox': }
 
-  homebrew::tap { 'caskroom/versions': }
-  homebrew::tap { 'caskroom/fonts': }
-
   package {
     [
-      'font-camingocode',
-      'font-fantasque-sans-mono',
-      'font-fira-mono',
-      'font-hack',
-      'font-inconsolata-for-powerline',
-      'font-input',
-      'font-lato',
-      'font-monoid',
-      'font-open-sans',
-      'font-share-tech',
-      'font-ubuntu-mono-powerline'
-    ]:
-    provider => 'brewcask',
-    require  => Homebrew::Tap['caskroom/fonts']
-  }
-
-# package {
-# 	[
-# 		'affinity-designer',
-# 		'affinity-photo'
-# 	]:
-# 	provider => 'brewcask',
-# 	install_options => ['--appdir=/Applications'],
-# 	require => Homebrew::Tap['singuerinc/homebrew-casks']
-# }
-
-  package {
-    [
-      'google-chrome-canary',
-      'openemu-experimental'
-		]:
-		provider => 'brewcask',
-		install_options => ['--appdir=/Applications'],
-		require => Homebrew::Tap['caskroom/versions']
-	}
-
-#	package {
-#		[
-#			'popcorn-time',
-#		]:
-#		provider => 'brewcask',
-#		require => Homebrew::Tap['casidiablo/custom']
-#	}
-
-  package {
-    [
-      'asciinema',
       'aria2',
-      'ccat',
+      'asciinema',
       'autojump',
+      'ccat',
       'htop',
       'httpie',
       'lynx',
@@ -96,7 +47,6 @@ class people::singuerinc::applications {
       'nmap',
       'peco',
       'ssh-copy-id',
-      'sublime-text',
       'subliminal',
       'the_silver_searcher',
       'tig',
@@ -118,10 +68,25 @@ class people::singuerinc::applications {
       'applepi-baker',
 #     'appzapper',
       'boom',
+#     'casidiablo/custompopcorn-time',
+      'caskroom/fonts/font-camingocode',
+      'caskroom/fonts/font-fantasque-sans-mono',
+      'caskroom/fonts/font-fira-mono',
+      'caskroom/fonts/font-hack',
+      'caskroom/fonts/font-inconsolata-for-powerline',
+      'caskroom/fonts/font-input',
+      'caskroom/fonts/font-lato',
+      'caskroom/fonts/font-monoid',
+      'caskroom/fonts/font-open-sans',
+      'caskroom/fonts/font-share-tech',
+      'caskroom/fonts/font-ubuntu-mono-powerline',
+      'caskroom/versions/google-chrome-canary',
+      'caskroom/versions/openemu-experimental',
 #     'cheatsheet',
       'chromium',
       'daisydisk',
 #     'dockertoolbox',
+      'docker',
       'dropbox',
 #     'enjoyable',
       'firefox',
@@ -139,11 +104,14 @@ class people::singuerinc::applications {
       'macdown',
       'opera',
       'sequel-pro',
+# 		'singuerinc/homebrew-casks/affinity-designer',
+# 		'singuerinc/homebrew-casks/affinity-photo',
       'skype',
 #     'slack',
       'slate',
       'sourcetree',
       'spotify',
+      'sublime-text',
       'teamviewer',
       'torbrowser',
       'transmission',
