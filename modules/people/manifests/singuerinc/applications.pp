@@ -33,6 +33,7 @@ class people::singuerinc::applications {
 
   atom::theme   { 'nucleus-dark-ui': }
   atom::theme   { 'gruvbox': }
+  atom::theme   { 'dracula': }
 
   package {
     [
