@@ -97,6 +97,7 @@ class people::singuerinc::applications {
       'google-chrome',
       'handbrake',
       'hex-fiend',
+      'hyperterm',
       'imageoptim',
       'insomniax',
       'iterm2-beta',
