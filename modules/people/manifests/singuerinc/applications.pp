@@ -41,6 +41,7 @@ class people::singuerinc::applications {
       'asciinema',
       'autojump',
       'ccat',
+      'fzf',
       'htop',
       'httpie',
       'lynx',
